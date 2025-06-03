@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `test_vocacional` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `test_vocacional`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: localhost    Database: test_vocacional
@@ -25,10 +23,10 @@ DROP TABLE IF EXISTS `usuario_test`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuario_test` (
-  `idusuario_test` int NOT NULL AUTO_INCREMENT,
+  `idusuariotest` int NOT NULL AUTO_INCREMENT,
   `idusuario` int NOT NULL,
   `idtest` int NOT NULL,
-  PRIMARY KEY (`idusuario_test`),
+  PRIMARY KEY (`idusuariotest`),
   KEY `pk_usuario_test_idx` (`idtest`),
   KEY `pk_test_idx` (`idusuario`),
   CONSTRAINT `pk_test` FOREIGN KEY (`idusuario`) REFERENCES `usuario` (`idusuario`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -54,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-26 12:54:22
+-- Dump completed on 2025-06-03  9:11:14

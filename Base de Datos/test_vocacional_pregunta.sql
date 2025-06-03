@@ -23,14 +23,14 @@ DROP TABLE IF EXISTS `pregunta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pregunta` (
-  `id_pregunta` int NOT NULL AUTO_INCREMENT,
-  `pregunta_texto` varchar(255) NOT NULL,
-  `id_tema` int NOT NULL,
+  `idpregunta` int NOT NULL AUTO_INCREMENT,
+  `pregunta` varchar(255) NOT NULL,
   `respuesta` int NOT NULL,
   `valor` int NOT NULL,
-  PRIMARY KEY (`id_pregunta`),
-  KEY `fk_tema_idx` (`id_tema`),
-  CONSTRAINT `fk_tema` FOREIGN KEY (`id_tema`) REFERENCES `tema` (`id_tema`) ON DELETE CASCADE ON UPDATE CASCADE
+  `idtema` int NOT NULL,
+  PRIMARY KEY (`idpregunta`),
+  KEY `fk_tema_idx` (`idtema`),
+  CONSTRAINT `fk_tema` FOREIGN KEY (`idtema`) REFERENCES `tema` (`idtema`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -40,7 +40,7 @@ CREATE TABLE `pregunta` (
 
 LOCK TABLES `pregunta` WRITE;
 /*!40000 ALTER TABLE `pregunta` DISABLE KEYS */;
-INSERT INTO `pregunta` VALUES (5,'pregunta1',1,0,3),(6,'pregunta2',1,1,2),(7,'pregunta3',1,0,4),(8,'pregunta4',1,1,1),(9,'pregunta5',1,0,4),(10,'pregunta6',1,1,3),(11,'chau7',1,5,2),(13,'pregunta9',1,0,4),(14,'pregunta10',1,1,3);
+INSERT INTO `pregunta` VALUES (5,'pregunta1',0,3,1),(6,'pregunta2',1,2,1),(7,'pregunta3',0,4,1),(8,'pregunta4',1,1,1),(9,'pregunta5',0,4,1),(10,'pregunta6',1,3,1),(11,'chau7',5,2,1),(13,'pregunta9',0,4,1),(14,'pregunta10',1,3,1);
 /*!40000 ALTER TABLE `pregunta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-30  9:07:06
+-- Dump completed on 2025-06-03  9:11:14
