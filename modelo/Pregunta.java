@@ -1,21 +1,27 @@
   
-package modelo;
-
- 
-public class Pregunta { 
+public class Pregunta {
     private int id;
     private String pregunta;
-    private boolean respuesta;
+    private String respuesta;
     private int valor;
-   
+    private int idtema;
 
     public Pregunta() {
     }
 
-    public Pregunta(String pregunta, boolean respuesta, int valor, int id) {
+    public Pregunta(int id, String pregunta, String respuesta, int valor, int idtema) {
+        this.id = id;
         this.pregunta = pregunta;
         this.respuesta = respuesta;
         this.valor = valor;
+        this.idtema = idtema;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -27,11 +33,11 @@ public class Pregunta {
         this.pregunta = pregunta;
     }
 
-    public boolean getRespuesta() {
+    public String getRespuesta() {
         return respuesta;
     }
 
-    public void setRespuesta(boolean respuesta) {
+    public void setRespuesta(String respuesta) {
         this.respuesta = respuesta;
     }
 
@@ -43,12 +49,14 @@ public class Pregunta {
         this.valor = valor;
     }
 
-    public int getId() {
-        return id;
+    public int getIdtema() {
+        return idtema;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdtema(int idtema) {
+        this.idtema = idtema;
     }
-    
+   
+
+     
 }
