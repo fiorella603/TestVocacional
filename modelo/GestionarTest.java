@@ -21,7 +21,7 @@ public class GestionarTest {
         this.rs = null;
     }
     
-    public boolean insertarTest(Test1 t){
+    public boolean insertarTest(Test t){
         boolean respuesta = false;
         try {              
             cn = c.conectar();
@@ -41,14 +41,14 @@ public class GestionarTest {
         return respuesta;
     }
     
-    public ArrayList<Test1> BuscarColeccionTest(){
-        ArrayList<Test1> test=new ArrayList<>();
+    public ArrayList<Test> BuscarColeccionTest(){
+        ArrayList<Test> test=new ArrayList<>();
         try {
             cn = c.conectar();
             ps = cn.prepareStatement("SELECT * FROM ");            
             rs = ps.executeQuery();
             while (rs.next()) {
-                Test1 t1 = new Test1();
+                Test t1 = new Test();
                 t1.setId(rs.getInt(1));
                 t1.setNombre(rs.getString(2));
                 t1.setDescripcion(rs.getString(3));
@@ -66,15 +66,15 @@ public class GestionarTest {
         return test;
     }
     
-        public ArrayList<Test1> BuscarTestNombre(String nombre){
-        ArrayList<Test1> test=new ArrayList<>();
+        public ArrayList<Test> BuscarTestNombre(String nombre){
+        ArrayList<Test> test=new ArrayList<>();
         try {
             cn = c.conectar();
             ps = cn.prepareStatement("SELECT * FROM test WHERE nombre=?");
             ps.setString(1, nombre);
             rs = ps.executeQuery();
             while (rs.next()) {
-                Test1 t1 = new Test1();
+                Test t1 = new Test();
                 t1.setId(rs.getInt(1));
                 t1.setNombre(rs.getString(2));
                 t1.setDescripcion(rs.getString(3));
@@ -92,8 +92,8 @@ public class GestionarTest {
         return test;
     }
         
-        public Test1 BuscarTestId(int id){
-            Test1 t1 = new Test1();
+        public Test BuscarTestId(int id){
+            Test t1 = new Test();
         try {
             cn = c.conectar();
             ps = cn.prepareStatement("SELECT * FROM test WHERE idtest=?");
@@ -116,7 +116,7 @@ public class GestionarTest {
         return t1;
     }
     
-    public boolean modificarTest(Test1 t){
+    public boolean modificarTest(Test t){
         boolean respuesta = false;
         try {              
             cn = c.conectar();
