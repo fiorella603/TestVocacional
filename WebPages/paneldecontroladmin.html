@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Control - Administrador</title>
+  <link href="css/paneldecontroladmin.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Admin</h2>
+      <a href="paneldecontroladmin.html">Home</a>
+    <a href="usuarios.html">Usuarios</a>
+    <a href="#">Estadísticas</a>
+    <a href="configuracion.html">Configuración</a>
+    <a href="#" onclick="cerrarSesion()">Cerrar sesión</a>
+  </div>
+
+  <div class="main">
+    <h1>Panel de Control</h1>
+
+    <div class="card">
+      <h3>Resumen</h3>
+      <p>Bienvenido al panel de administración. Desde aquí puedes gestionar los contenidos del sitio web.</p>
+    </div>
+    </div>
+    </div>
+  </div>
+<script>
+  function cerrarSesion() {
+
+    alert("Sesión cerrada");
+    window.location.href = "Login.html";
+  }
+</script>
+
+</body>
+</html>
