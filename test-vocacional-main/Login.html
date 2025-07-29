@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Test vocacional</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='login.css'>
+</head>
+      <header>
+    <a href="inicio.html"><img src="b9294ef0-b943-4652-b580-c95c38274f67.png" alt="Logo" class="logo"></a>
+  </header>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="preguntas.html">
+			<h1>Crear Cuenta</h1>
+			<input type="text" placeholder="Nombre" />
+			<input type="email" placeholder="Correo" />
+			<input type="password" placeholder="Contraseña" />
+			<button>Registrarse</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="preguntas.html">
+			<h1>Inicia Sesion</h1>
+			<input type="email" placeholder="Correo" />
+			<input type="password" placeholder="Contraseña" />
+			<a href="#">¿Olvidaste tu contraseña?</a>
+			<button>Inicia sesion</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bienvenido de nuevo</h1>
+				<p>Para mantenerse conectado con nosotros, inicie sesión con su información personal.</p>
+				<button class="ghost" id="signIn">Inicia Sesion</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Bienvenido</h1>
+				<p>Introduce tus datos personales</p>
+				<button class="ghost" id="signUp">Registrarse</button>
+			</div>
+		</div>
+	</div>
+</div>
+    <script src="login.js"></script>
