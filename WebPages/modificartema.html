@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Test de Orientación Vocacional CHASIDE</title>
+  <link href="css/modificartema.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+  <header>
+    <img src="imagenes/logo.png" alt="Logo" class="logo">
+    <div class="botonlogin">
+      <!-- Aquí podrías añadir botones de login o algo más si es necesario -->
+    </div>
+  </header>
+
+  <div class="boxtitulo">
+    <h2 class="titulo">Test de Orientación Vocacional PROA</h2>  
+  </div>
+
+  <div class="contenido">
+    <form action="ControladorModificarTema" method="post" class="formulario">
+      <h3 class="form-titulo">Modificar un tema</h3>
+
+      <!-- Campo para el nombre actual del tema -->
+      <label for="nombre" class="form-label">Nombre Actual del Tema:</label>
+      <input type="text" name="nombre" id="nombre" class="form-input" required /><br><br>
+
+      <!-- Campo para el nuevo nombre del tema -->
+      <label for="nuevoNombre" class="form-label">Nuevo Nombre del Tema:</label>
+      <input type="text" name="nuevoNombre" id="nuevoNombre" class="form-input" required /><br><br>
+
+      <div class="form-boton">
+        <input type="submit" value="Modificar" name="modificar" class="boton-enviar" />
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

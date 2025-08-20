@@ -1,0 +1,142 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+
+header {
+  background: linear-gradient(to right, 
+    rgb(44, 62, 80), 
+    rgb(64, 84, 100), 
+    rgb(84, 106, 120), 
+    rgb(104, 128, 140));
+  color: white;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo {
+  height: 90px;
+}
+
+.titulo-principal {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.boxtitulo {
+  background: linear-gradient(to right, 
+    rgb(44, 62, 80), 
+    rgb(64, 84, 100), 
+    rgb(84, 106, 120), 
+    rgb(104, 128, 140));
+  margin: 20px 0;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-family: RonniaRegular, Arial, sans-serif;
+  margin: 0;
+  font-size: 39px;
+  color: #FFFFFF;
+}
+
+/* Contenido principal */
+.contenido {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Botón común */
+.boton {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.boton a {
+  padding: 12px 30px;
+  text-decoration: none;
+  background-color: rgb(44, 62, 80);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.boton a:hover {
+  background-color: rgb(64, 84, 100);
+}
+
+
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-titulo {
+  text-align: center;
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.form-input {
+  padding: 10px;
+  border: 1px solid #000000 ;
+  border-radius: 4px;
+  font-size: 16px;
+  width:600px;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #2c3e50;
+  outline: none;
+}
+
+.form-boton {
+  display: flex;
+  justify-content: center;
+}
+
+.boton-enviar {
+  padding: 12px 30px;
+  background: rgb(44, 62, 80);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boton-enviar:hover {
+  background: rgb(26, 37, 48);
+}
